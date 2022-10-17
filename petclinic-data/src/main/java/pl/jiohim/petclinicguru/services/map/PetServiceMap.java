@@ -1,12 +1,11 @@
 package pl.jiohim.petclinicguru.services.map;
 
-import pl.jiohim.petclinicguru.model.Owner;
-import pl.jiohim.petclinicguru.model.Pet;
-import pl.jiohim.petclinicguru.services.CrudService;
 
+import pl.jiohim.petclinicguru.model.Pet;
+import pl.jiohim.petclinicguru.services.PetService;
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
