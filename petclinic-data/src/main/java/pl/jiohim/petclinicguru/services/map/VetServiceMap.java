@@ -1,12 +1,13 @@
 package pl.jiohim.petclinicguru.services.map;
 
-import pl.jiohim.petclinicguru.model.Owner;
-import pl.jiohim.petclinicguru.model.Vet;
-import pl.jiohim.petclinicguru.services.CrudService;
-import pl.jiohim.petclinicguru.services.VetService;
 
+import org.springframework.stereotype.Service;
+import pl.jiohim.petclinicguru.model.Vet;
+import pl.jiohim.petclinicguru.services.VetService;
 import java.util.Set;
 
+
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {

@@ -1,9 +1,12 @@
 package pl.jiohim.petclinicguru.services.map;
 
 
+import org.springframework.stereotype.Service;
 import pl.jiohim.petclinicguru.model.Pet;
 import pl.jiohim.petclinicguru.services.PetService;
 import java.util.Set;
+
+@Service
 
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 

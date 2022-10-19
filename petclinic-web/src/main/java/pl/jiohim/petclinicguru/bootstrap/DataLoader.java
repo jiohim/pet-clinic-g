@@ -1,25 +1,24 @@
 package pl.jiohim.petclinicguru.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import pl.jiohim.petclinicguru.model.Owner;
 import pl.jiohim.petclinicguru.model.Vet;
 import pl.jiohim.petclinicguru.services.OwnerService;
 import pl.jiohim.petclinicguru.services.VetService;
-import pl.jiohim.petclinicguru.services.map.OwnerServiceMap;
-import pl.jiohim.petclinicguru.services.map.VetServiceMap;
 
 
 @Component
 public class DataLoader implements CommandLineRunner {
 
-    private  final OwnerService ownerService;
-    private  final VetService vetService;
+    private final OwnerService ownerService;
+    private final VetService vetService;
 
-
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    @Autowired
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
