@@ -2,14 +2,14 @@ package pl.jiohim.petclinicguru.services.map;
 
 import org.springframework.stereotype.Service;
 import pl.jiohim.petclinicguru.model.Speciality;
-import pl.jiohim.petclinicguru.services.SpecialitiesService;
+import pl.jiohim.petclinicguru.services.SpecialityService;
 
 import java.util.Set;
 
 
 @Service
 public class SpecialityMapService extends AbstractMapService<Speciality,Long>
-        implements SpecialitiesService {
+        implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
